@@ -1,0 +1,11 @@
+Practice
+My name is Gabrielle Blackman
+My name is Linda
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+everything is change everything is time
+=======
+Here's David doing some critical coding stuff. This is very important!
+>>>>>>> 9c9ba74ba87dfc4e19576d2c4655e47c6da5789d
+>>>>>>> 61ce6a02671655a91c2140092542251ae8c8f202
