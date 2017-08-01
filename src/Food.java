@@ -1,19 +1,14 @@
-/**
- * Created by Grand Circus Student on 7/31/2017.
- */
 public class Food {
     private String foodName;
     private String categoryName;
     private double price;
     private String description;
-    private int quantity;
 
     public Food(String foodName, String categoryName, double price, String description, int quantity) {
         this.foodName = foodName;
         this.categoryName = categoryName;
         this.price = price;
         this.description = description;
-        this.quantity = quantity;
     }
 
     public String getFoodName() {
@@ -46,14 +41,6 @@ public class Food {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 }
 
