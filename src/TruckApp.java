@@ -13,9 +13,9 @@ public class TruckApp {
         double grandSubTotal;
         double SALESTAX;
         String paymentMethod;
-        String ccNumber;
-        String expDate;
-        String CVV;
+        String ccNum;
+        String expireDate;
+        String cvvNum;
         int checkNum;
 
 
