@@ -1,10 +1,13 @@
+import java.util.ArrayList;
+
 public class Food {
+
     private String foodName;
     private String categoryName;
     private double price;
     private String description;
 
-    public Food(String foodName, String categoryName, double price, String description, int quantity) {
+    public Food(String foodName, String categoryName, double price, String description) {
         this.foodName = foodName;
         this.categoryName = categoryName;
         this.price = price;
@@ -41,6 +44,12 @@ public class Food {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return categoryName + '\'' + foodName + '\'' + description + '\'' + price;
+
     }
 }
 

@@ -1,0 +1,20 @@
+Burger Nacho Supreme	Nacho	8	Corn chips covered with ground beef and melted cheese. Topped with guacamole, sour cream, tomatoes, green onions, jalapeños, and olives.
+Nacho Supreme	Nacho	11.25	Topped with chicken and ground beef along with lettuce, tomatoes and sour cream.
+Fajita Style Nacho	Nacho	13.99	Your choice of grilled chicken or steak, served on top of a bed of fresh nacho chips,along with lettuce, cheese, pico de gallo, guacamole and sour cream.
+Al Carbon Nacho	Nacho	13.99	Tender grilled chicken, steak and shrimp on top of fresh nacho chips, topped with cilantro, shredded cheese and pico de gallo.
+Fish Taco	Taco	3.5	Grilled Tilipia, shredded cheese, red onions, cilantro, salsa verde & pico de gallo.
+Shrimp Taco	Taco	3.5	Blackened shrimp, shredded cheese, red onions, cilantro, salsa verde & pico de gallo.
+Chicken Taco	Taco	3	Shredded, Grilled Chicken, shredded cheese, red onions, cilantro, salsa verde & pico de gallo.
+Steak Taco	Taco	4	Sliced, marinated steak with shredded cheese, red onions, cilantro & pico de gallo.
+Grilled Chicken Enchildas	Enchilda	9.5	Tender grilled chicken or steak stuffed in corn tortilla shell and topped with our homemade ranchero sauce, melted cheese, lettuce, tomatoes and sour cream.
+Suizas Enchiladas	Enchilda	10.75	Shredded chicken stuffed in corn tortilla and topped with creamy and spicy tomatillo sauce, lettuce, tomatoes and fresh guacamole.
+Veggies Enchiladas	Enchilda	9	Sautéed garlic, carrots, zucchini, broccoli, cauliflower, and yellow squash stuffed in corn tortilla and topped with our homemade enchilada sauce and melted cheese.
+Crawfish Enchiladas	Enchilda	12.5	Crawfish cook to perfection with bell pepper, tomatoes, onions, celery, fresh garlic and spices. Topped with a delicious white cream sauce and melted cheese.
+Burritos Deluxe 	Burrito	11.25	Two burritos, one stuffed with chicken and beans, the other stuffed with beef tips and beans, both topped with lettuce, tomatoes, guacamole and sour cream.
+Steak & Cheese Burrito	Burrito	13.25	Burrito stuffed with chopped steak and topped with melted cheese. Served with lettuce, tomatoes, guacamole, rice and beans.
+Tri Color Burrito	Burrito	13.25	Large flour tortilla stuffed with grilled chicken or steak, along with rice, beans and lettuce. Topped with red ranchero sauce, melted cheese sauce and green tomatillo sauce.
+Fajita Burrito	Burrito	11.99	Burrito de fajita estilo California. A ten inch flour tortilla filled with choice of steak or chicken, sautéed onions, bell peppers, tomatoes and beans. Served with lettuce, tomatoes, sour cream and pico de gallo.
+Fajita Chimichanga	Chimichanga	9.99	Large flour tortilla filled with cheese and your choice of beef fajita or chicken fajita, deep fried and topped with chile con queso.
+Ground Beef Chimichanga	Chimichanga	8.99	Large flour tortilla filled with cheese, ground beef, deep fried and topped with chile con queso.
+Shrimp Chimichanga	Chimichanga	11.99	Large flour tortilla filled with cheese, shrimp, lettuce, deep fried and topped with
+Tilipia Chimichanga	Chimichanga	9.99	Stuffed flour tortilla with Tilipia.Deep-fried to a golden brown and topped with cheese dip, lettuce, guacamole, and pico de gallo. Served with rice and beans.

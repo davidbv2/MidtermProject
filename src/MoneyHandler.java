@@ -6,7 +6,7 @@ public class MoneyHandler {
             grandTotal = 15.00;
             change = amountTendered - grandTotal;
 
-            return  change;
+            return change;
 
         }
         public static String creditTrans(String ccNum, String expireDate, String cvvNum){
