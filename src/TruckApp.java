@@ -8,10 +8,10 @@ public class TruckApp {
         int menuNum;
         int quantity;
         String userAnswer = "";
-        double grandTotal;
+        double grandTotal = 0.0;
         double itemSubTotal;
         double grandSubTotal = 0.0;
-        double SALESTAX;
+        double SALESTAX = 1.06;
         String paymentMethod;
         String ccNum;
         String expireDate;
@@ -45,7 +45,19 @@ public class TruckApp {
 
         } while (userAnswer.equalsIgnoreCase("Yes"));
 
+        grandTotal = grandSubTotal * SALESTAX;
+        System.out.println(grandTotal);
+
         System.out.println("What form of payment would you like to use: C=CASH, CC= CREDIT CARD, CHK= CHECK");
+        paymentMethod = scan.nextLine();
+
+        if (paymentMethod.equalsIgnoreCase("C")){
+            System.out.println("How much cash are you tendering?: ");
+            double amountTendered = scan.nextDouble();
+            MoneyHandler.cashTrans(amountTendered,grandTotal);
+        } else if (paymentMethod.equalsIgnoreCase("CC")){
+
+        }
 
 
     }
