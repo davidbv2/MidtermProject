@@ -5,12 +5,12 @@ public class TruckApp {
 
 
     public static void main(String[] args) {
-        int userWants;
         int menuNum;
         int quantity;
+        String userAnswer = "";
         double grandTotal;
         double itemSubTotal;
-        double grandSubTotal;
+        double grandSubTotal = 0.0;
         double SALESTAX;
         String paymentMethod;
         String ccNum;
@@ -24,29 +24,26 @@ public class TruckApp {
         ArrayList<Food> finalMenuList = transferMenu.readFile("./MenuItems.txt"); //created new AL to store menu from MR class
 
 
-        for (int i = 0; i < finalMenuList.size() ; i++) {
-            System.out.println(finalMenuList.get(i));
-
-        }
-
         System.out.println();
 
-        System.out.print("How many items would you like?: ");
-        userWants = scan.nextInt();
 
-        for (int i = 0; i <= userWants ; i++) {
+        do {
+            for (Food menuItem : finalMenuList){
+                System.out.println(menuItem);
+            }
             System.out.print("Please select a menu item from 1-20: ");
             menuNum = scan.nextInt();
-            System.out.println(finalMenuList.get(menuNum-1));
+            System.out.println(finalMenuList.get(menuNum - 1));
             System.out.print("How many of this item would you like?: ");
             quantity = scan.nextInt();
-            //itemSubTotal =
+            itemSubTotal = quantity * (finalMenuList.get(menuNum - 1).getPrice());
+            grandSubTotal += itemSubTotal;
+            System.out.println(grandSubTotal);
+            System.out.print("Would you like to order another item? Please enter 'yes' or 'no: ");
+            scan.nextLine();
+            userAnswer = scan.nextLine();
 
-
-
-        }
-
-        System.out.println("Please select a menu item: 1-20 ");
+        } while (userAnswer.equalsIgnoreCase("Yes"));
 
         System.out.println("What form of payment would you like to use: C=CASH, CC= CREDIT CARD, CHK= CHECK");
 
