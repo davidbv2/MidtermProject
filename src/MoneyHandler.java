@@ -6,16 +6,29 @@ public class MoneyHandler {
             grandTotal = 15.00;
             change = amountTendered - grandTotal;
 
-            return change;
+
+            System.out.println("Your change is: " + change);
+            return  change;
 
         }
-        public static String creditTrans(String ccNum, String expireDate, String cvvNum){
+        public void creditTrans(String ccNum, String expireDate, String cvvNum){
 
-            if (ccNum.length() != 16 || expireDate.length() != 5 ||cvvNum.length() != 3)
-                System.out.println("Invalid number");
+            if (ccNum.length() != 16) {
+                System.out.println("Invalid card number, please reenter your card number");
+            }
+            if (expireDate.length() != 5){
+                System.out.println("Invalid expiration date, please reenter");
+            }
+            if (ccNum.length() != 3){
+                System.out.println("Invalid CVV, please reenter the number");
+            }
+
+
             else System.out.println("Payment Accepted");
 
-            return ccNum;
+
+
+
 
         }
 

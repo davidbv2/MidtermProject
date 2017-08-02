@@ -13,9 +13,9 @@ public class TruckApp {
         double grandSubTotal;
         double SALESTAX;
         String paymentMethod;
-        String ccNumber;
-        String expDate;
-        String CVV;
+        String ccNum;
+        String expireDate;
+        String cvvNum;
         int checkNum;
         ArrayList<Food> userChoices = new ArrayList<Food>(); //use to store user choices
 
@@ -40,7 +40,7 @@ public class TruckApp {
             System.out.println(finalMenuList.get(menuNum-1));
             System.out.print("How many of this item would you like?: ");
             quantity = scan.nextInt();
-            itemSubTotal = 
+            //itemSubTotal =
 
 
 
