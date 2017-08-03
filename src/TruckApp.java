@@ -7,21 +7,22 @@ public class TruckApp {
 
 
     public static void main(String[] args) {
-        int menuNum;
-        int quantity;
+        int menuNum = 0;
+        int quantity = 0;
         String userAnswer = "";
         double grandTotal = 0.0;
-        double itemSubTotal;
+        double itemSubTotal = 0.0;
         double grandSubTotal = 0.0;
-        double SALESTAX = 1.06;
+        double SALESTAX = .06;
         String paymentMethod;
-        double amountTendered;
-        String ccNum;
-        String expireDate;
-        String cvvNum;
+        double amountTendered = 0.0;
+        double change = 0.0;
+        String ccNum = "";
+        String expireDate = "";
+        String cvvNum = "";
         boolean notValid = false;
-        String checkNum;
-        ArrayList<Food> userChoices = new ArrayList<Food>(); //use to store user choices
+        String checkNum = "";
+        ArrayList<String> receipt = new ArrayList<>(); //use to store food item names ordered
 
         Scanner scan = new Scanner(System.in);
         MenuReader transferMenu = new MenuReader(); // object created to get menu from MenuReader class
@@ -38,6 +39,8 @@ public class TruckApp {
             System.out.print("Please select a menu item from 1-20: ");
             menuNum = scan.nextInt();
             System.out.println(finalMenuList.get(menuNum - 1));
+            String receiptItem = finalMenuList.get(menuNum-1).getFoodName();
+            receipt.add(receiptItem);
             System.out.print("How many of this item would you like?: ");
             quantity = scan.nextInt();
             itemSubTotal = quantity * (finalMenuList.get(menuNum - 1).getPrice());
@@ -49,10 +52,11 @@ public class TruckApp {
 
         } while (userAnswer.equalsIgnoreCase("Yes"));
 
-        grandTotal = grandSubTotal * SALESTAX;
-        System.out.println(grandTotal);
+        grandTotal = grandSubTotal + (grandSubTotal * SALESTAX);
+        System.out.println("Your subtotal is $" + grandSubTotal + "," + " Tax: $" + (grandSubTotal * SALESTAX)
+        + ", Grand Total: $" + grandTotal + ".");
 
-        System.out.println("What form of payment would you like to use: C=CASH, CC= CREDIT CARD, CHK= CHECK");
+        System.out.print("What form of payment would you like to use (C=CASH, CC= CREDIT CARD, CHK= CHECK): ");
         paymentMethod = scan.nextLine();
 
         if (paymentMethod.equalsIgnoreCase("C")) {
@@ -67,7 +71,7 @@ public class TruckApp {
 
 
             if (MoneyHandler.cashTrans(amountTendered,grandTotal) == true){
-                double change = amountTendered - grandTotal;
+                change = amountTendered - grandTotal;
                 System.out.println("I guess we'll give you back $ " + change + " in change.");
             }
 
@@ -103,6 +107,20 @@ public class TruckApp {
             }
         }
 
+        System.out.println();
+
+        System.out.println("Thank you for dealing with us! Here's your receipt:");
+        System.out.println(receipt.toString());
+        System.out.println("Subtotal: $" + grandSubTotal);
+        System.out.println("Grand Total: $" + grandTotal);
+        if(paymentMethod.equalsIgnoreCase("C")){
+            System.out.println("Amount tendered: $" + amountTendered);
+            System.out.println("Change amount: " + change);
+        } else if (paymentMethod.equalsIgnoreCase("CC")){
+            System.out.println("Paid with Card #: " + (ccNum.substring(12)));
+        } else if (paymentMethod.equalsIgnoreCase("CHK")) {
+            System.out.println("Paid with Check #: " + checkNum);
+        }
 
     }
 
