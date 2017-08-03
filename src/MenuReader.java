@@ -56,19 +56,19 @@ public class MenuReader {
                             break;
                         }
 
-                        //take the first item and put it into the car's Make
+                        //take the first item and put it into Food's foodName
                         String foodName = details[0];
-                        //take the second item and put into car's Model
+                        //take the second item and put into Food's categoryName
                         String categoryName = details[1];
-                        //take the third item, turn it into an int, put into Year
+                        //take the third item, turn it into an int, put into price
                         double price = Double.parseDouble(details[2]);
-                        //take the fourth item, turn it to double, put into Price
+                        //take the fourth item, turn it to double, put into description
                         String description = (details[3]);
 
-                        //construct a new Car object from this data
+                        //construct a new Food object from this data
                         Food menuItem = new Food(foodName, categoryName, price, description);
 
-                        //add the new Car into ArrayList
+                        //add the new Food object into ArrayList
                         menuList.add(menuItem);
 
                         //read in the next line for the next iteration
