@@ -75,7 +75,7 @@ public class TruckApp {
                     amountTendered = scan.nextDouble();
                     if (amountTendered < grandTotal) {
                         double owed = grandTotal - amountTendered;
-                        System.out.println("Run me my money! You owe US! $" + owed);
+                        System.out.println("Run me my money! You owe US! $" + decimalFormat.format(owed));
                     }
                 } while (notValid == MoneyHandler.cashTrans(amountTendered, grandTotal));
 
@@ -126,10 +126,10 @@ public class TruckApp {
 
             System.out.println("Thank you for dealing with us! Here's your receipt:");
             System.out.println(receipt.toString());
-            System.out.println("Subtotal: $" + grandSubTotal);
-            System.out.println("Grand Total: $" + grandTotal);
+            System.out.println("Subtotal: $" + decimalFormat.format(grandSubTotal));
+            System.out.println("Grand Total: $" + decimalFormat.format(grandTotal));
             if (paymentMethod.equalsIgnoreCase("C")) {
-                System.out.println("Amount tendered: $" + amountTendered);
+                System.out.println("Amount tendered: $" + decimalFormat.format(amountTendered));
                 System.out.println("Change amount: $" + decimalFormat.format(change));
             } else if (paymentMethod.equalsIgnoreCase("CC")) {
                 System.out.println("Paid with Card #: " + (ccNum.substring(12)));
